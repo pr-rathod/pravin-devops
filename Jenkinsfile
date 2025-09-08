@@ -25,7 +25,7 @@ pipeline {
             steps {
                 sshagent (credentials: ['deploy-ssh-key']) {
                     sh '''
-                    ssh -o StrictHostKeyChecking=no deploy@YOUR_SERVER_IP 'bash -s' <<'EOF'
+                    ssh -o StrictHostKeyChecking=no deploy@10.20.33.199 'bash -s' <<'EOF'
                       set -e
                       cd /home/deploy/app
                       git fetch origin
